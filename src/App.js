@@ -8,16 +8,16 @@ function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
 
   const shownCartHandler = () => {
-    setCartIsShown(true)
+    setCartIsShown(true);
   };
   const hiddenCartHandler = () => {
-    setCartIsShown(false)
+    setCartIsShown(false);
   };
 
   return (
     <CartProvider>
-      {cartIsShown && <Cart  onHidden={hiddenCartHandler}/>}
-      <Header onShow={shownCartHandler}/>
+      {cartIsShown && <Cart onHidden={hiddenCartHandler} />}
+      <Header onShow={shownCartHandler} />
       <main>
         <Meals />
       </main>
