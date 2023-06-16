@@ -1,29 +1,45 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5rem;
-    background-color: #8a2b06;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    z-index: 10;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); */
+  z-index: 10;
 
-  .main-image {
-    width: 100%;
-    height: 25rem;
-    z-index: 0;
-    overflow: hidden;
-  }
+}
 
-  .main-image img {
-    width: 110%;
-    height: 100%;
-    object-fit: cover;
-    transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
-  }
+.main-image {
+  width: 100%;
+  height: 35rem;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.main-image img {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateZ(-6deg) translateY(-4rem) translateX(-1rem);
+}
+
+/* Media queries for QHD monitors */
+@media screen and (min-width: 2560px) {
+.main-image img {
+  transform: rotateZ(-4deg) translateY(-6rem) translateX(-2rem);
+}
+}
+
+/* Media queries for 4K monitors */
+@media screen and (min-width: 3840px) {
+.main-image img {
+  transform: rotateZ(-5deg) translateY(-8rem) translateX(-3rem);
+}
+}
+
